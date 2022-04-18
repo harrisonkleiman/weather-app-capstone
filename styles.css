@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+	background: linear-gradient(45deg, #50413f, #f07f59, #46a5c8, #ead56c);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.weather-app {
+  min-height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(243, 237, 209);
+  position: relative;
+  transition: 500ms;
+  opacity: 1;
+}
+
+h1, h3 {
+  font-weight: 400;
+}
+
+.weather-app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000002b;
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 2em 5em 5em 3em;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.city-time, .temp, .weather {
+  margin: 0 .5em;
+}
+
+.city-time h1 {
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-size: 1.8em;
+  margin-top: 2em;
+}
+
+.gen-info {
+  margin-bottom: 6.5em;
+}
+
+.name {
+  color: rgb(194, 227, 244);
+}
+.temp {
+  font-size: 6em;
+  margin: 0;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  color: rgb(243, 237, 209);
+  opacity: .8;
+}
+
+/* bring towards top */
+.weather {
+  margin-bottom: 7em;
+  margin-right: 2em;
+}
+
+.condition {
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-left: 1em;
+  color:rgb(243, 237, 209);
+}
+
+.weather img {
+  display: block;
+  margin: .5em 3;
+}
+
+.side-bar {
+  width: 45%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: #5f5e5e2b;
+  opacity: .9;
+  border: 1px solid #0000002d;
+  z-index: 1;
+  padding: 3em 2em;
+  margin-bottom: 2em;
+}
+
+
+h4 {
+  color: rgb(194, 227, 244);
+  font: "Nunito Sans", sans-serif;
+}
+
+.search-btn {
+  margin-top: 1em;
+  right: 2em;
+  margin-left: 2em;
+  padding: 1em;
+  margin-bottom: -4em;
+  border: none;
+  outline: none;
+  background: #0000002b;
+  color: rgb(194, 227, 244);
+  cursor: pointer;
+  font-size: .7em;
+  transition: 0.2s;
+  border-radius: 20px;
+}
+
+.search-btn:hover {
+  background: none;
+  color: rgb(243, 237, 209);
+  opacity: .7;
+}
+
+.search {
+  border-radius: 20px;
+  outline: none;
+  background: #0000002d;
+  border: none;
+  height: 2.5em;
+  width: 75%;
+  color: rgb(243, 237, 209);
+  font-size: .95em;
+  padding: .4em .5em;
+}
+
+.search::placeholder {
+  color: rgb(194, 227, 244);
+  font-weight: lighter;
+  font-size: small;
+}
+
+.side-bar ul {
+  padding: 0 0 1em 0;
+  margin: 2em 0;
+  border-bottom: 1px rgb(194, 227, 244) solid;
+}
+
+.side-bar ul li {
+  color: rgb(243, 237, 209);
+  margin: 2.5em 0;
+}
+
+.side-bar ul h4 {
+  margin: 3em 0;
+}
+
+.city {
+ display: block;
+ cursor: pointer;
+}
+
+.city:hover {
+  color: rgb(194, 227, 244)
+}
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.me {
+  display: flex;
+  margin-top: -1.8em;
+  margin-right: -3em;  
+  font-size: 1em;
+  color: #a4dff5
+}
+
+
+
+

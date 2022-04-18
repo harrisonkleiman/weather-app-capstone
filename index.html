@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://kit.fontawesome.com/ccbd4d6bc1.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <title>Weather App</title>
+</head>
+<body>
+  <div class="weather-app">
+  <div class="container">
+    <h3 class="me"> find me @harrisonkleiman</h3>
+	<div class="gen-info">
+	  <h1 class="temp"></h1>
+	  <div class="city-time">
+	    <h1 class="name"></h1>
+		<small>
+      <span class="time"></span>
+      - <span class="date"></span>
+    </small>
+	  </div>
+	  <div class="weather">
+	    <img src="./icons/day/113.png" class="icon" alt="icon" width="100" height="100">
+		<span class="condition"></span>
+	  </div>
+	</div>
+	</div>
+	<div class="side-bar">
+	  <form id="locationInput">
+	    <input type="text" class="search" placeholder="search the world...">
+		<button type="submit" class="search-btn">
+		  <i class="fas fa-search"></i>
+		</button>
+	  </form>
+	  
+	  <ul class="cities" color="#a4dff5">
+	    <li class="city">Salt Lake City</li>
+		  <li class="city">Manila</li>
+		  <li class="city">New York</li>
+		  <li class="city">Buenos Aires</li>
+	  </ul>
+	  
+	  <ul class="details">
+	    <h4>More info...</h4>
+	    <li>
+		  <span>Cloud cover is...</span>
+		  <span class="cloud">47%</span>
+		</li>
+		<li>
+		  <span>Humidity is...</span>
+		  <span class="humidity">33%</span>
+		</li>
+		<li>
+		  <span>Wind speed is...</span>
+		  <span class="wind">19mph</span>
+		</li>
+	  </ul>
+	</div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

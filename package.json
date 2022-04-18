@@ -1,0 +1,25 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./script.js",
+  "scripts": {
+    "start": "node ./server/index.js",
+    "server": "nodemon ./server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrisonkleiman/weather-app-capstone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harrisonkleiman/weather-app-capstone/issues"
+  },
+  "homepage": "https://github.com/harrisonkleiman/weather-app-capstone#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
-	background: linear-gradient(45deg, #50413f, #f07f59, #46a5c8, #ead56c);
+	background: linear-gradient(45deg, #cc4cf0, #f15a43, #46a5c8, #fddd3c);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
@@ -26,7 +26,6 @@ body {
 .weather-app {
   min-height: 100vh;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   color: rgb(243, 237, 209);
   position: relative;
@@ -35,7 +34,7 @@ body {
 }
 
 h1, h3 {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .weather-app::before {
@@ -84,7 +83,9 @@ h1, h3 {
 
 .name {
   color: rgb(194, 227, 244);
+  margin-left: -1em;
 }
+
 .temp {
   font-size: 6em;
   margin: 0;
@@ -114,7 +115,7 @@ h1, h3 {
 }
 
 .side-bar {
-  width: 45%;
+  width: 43%;
   height: 100%;
   top: 0;
   right: 0;
@@ -210,7 +211,5 @@ h4 {
   font-size: 1em;
   color: #a4dff5
 }
-
-
 
 

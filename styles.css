@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
-	background: linear-gradient(45deg, #cc4cf0, #f15a43, #46a5c8, #fddd3c);
+	background: linear-gradient(45deg, #fd037c, #f15a43, #46a5c8, #fddd3c);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
@@ -84,6 +84,7 @@ h1, h3 {
 .name {
   color: rgb(194, 227, 244);
   margin-left: -1em;
+  font-size: larger;
 }
 
 .temp {
@@ -171,7 +172,7 @@ h4 {
 .search::placeholder {
   color: rgb(194, 227, 244);
   font-weight: lighter;
-  font-size: small;
+  font-size: 1em;
 }
 
 .side-bar ul {
@@ -210,25 +211,33 @@ h4 {
   position: absolute;
   top: 0;
   right: 1em;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-.find-me {
-  display: inline-block;
-}
-
-.find-me a {
-  color: rgb(194, 227, 244);
-  margin: 0 .5em;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.find-me a:hover {
   color: rgb(243, 237, 209);
+  font-size: 1.15em;
+  font-style: lighter;
+  cursor: pointer;
+  text-decoration: underline rgb(243, 237, 209);
+}
+  
+.btn-linkedin {
+  /* move right right corner */
+  position: absolute;
+  top: 1em;
+  right: 2.7em;
+  color: rgb(194, 227, 244);
+  font-size: 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-
-
-
+.btn-github {
+  /* move right right corner */
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: rgb(194, 227, 244);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}

@@ -75,7 +75,11 @@ function getWeather() {
       const month = date.slice(5, 7)
       const day = date.slice(8, 10)
       //get time from the API and convert to 12 hour format
-      const time = data.location.localtime.slice(11, 16)
+      let time = data.location.localtime
+      let hours = time.slice(11, 13)
+      let minutes = time.slice(11, 16)
+      let ampm = hours >= 12 ? "PM" : "AM"
+      time = `${minutes} ${ampm}`
 
       displayDate.innerHTML = `${dayOfTheWeek(
         month,

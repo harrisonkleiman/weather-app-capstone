@@ -31,9 +31,9 @@ sideBar.addEventListener("submit", (e) => {
   if (search.value.length == 0) {
     alert("Hmm... cannot seem to find that city")
   } else {
-    // CITY name change when searched
+    // CITY NAME DISPLAY CHANGE
     cityInput = search.value
-
+    // REMOVE USER TEXT
     getWeather()
     search.value = ""
     app.style.opacity = "0"
@@ -57,7 +57,7 @@ function dayOfTheWeek(month, day, year) {
   return weekday[new Date(`${month}/${day}/${year}`).getDay()]
 }
 
-// MAIN FUNCTION
+// MAIN FUNCTION: GATHERING DATA AND DISPLAYING
 function getWeather() {
   fetch(
     `https://api.weatherapi.com/v1/current.json?key=e0c1a083d9094ababd0211848210510&q=${cityInput}&units=imperial`
@@ -74,25 +74,31 @@ function getWeather() {
       const year = date.slice(0, 4)
       const month = date.slice(5, 7)
       const day = date.slice(8, 10)
-      //get time from the API and convert to 12 hour format
+      //get time from the API
       let time = data.location.localtime
-      let hours = time.slice(11, 13)
-      let minutes = time.slice(11, 16)
-      let ampm = hours >= 12 ? "PM" : "AM"
-      time = `${minutes} ${ampm}`
 
+      //Hours in 12 hour format
+      const formatAMPM = (time) => {
+        let hours = time.getHours()
+        let minutes = time.getMinutes()
+        let ampm = hours >= 12 ? "PM" : "AM"
+        hours = hours % 12
+        hours = hours ? hours : 12 // the hour '0' should be '12'
+        minutes = minutes.toString().padStart(2, "0")
+        return hours + ":" + minutes + " " + ampm
+      }
       displayDate.innerHTML = `${dayOfTheWeek(
         month,
         day,
         year
       )} ${month}/${day}/${year}`
 
-      // TIME
-      displayTime.innerHTML = time
+      // DISPLAY TIME
+      displayTime.innerHTML = formatAMPM(new Date(time))
 
       displayName.innerHTML = data.location.name
 
-      // ACCURATE ICONS
+      // ACCURATE WEATHER ICONS
       const iconId = data.current.condition.icon.substr(
         "//cdn.weatherapi.com/weather/64x64/".length
       )
@@ -107,7 +113,7 @@ function getWeather() {
       app.style.opacity = "1"
     })
 }
-//Call the function on page load
+//CALL FUNCTION ON PAGE LOAD
 getWeather()
 
 

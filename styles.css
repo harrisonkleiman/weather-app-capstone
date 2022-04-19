@@ -78,7 +78,7 @@ h1, h3 {
 }
 
 .gen-info {
-  margin-bottom: 6.5em;
+  margin-top: 4.5em;
 }
 
 .name {
@@ -104,7 +104,7 @@ h1, h3 {
 .condition {
   font-size: 1.1em;
   font-style: italic;
-  bottom: 1.4em;
+  bottom: .5em;
   left: 5px;
   position: relative;
   color:rgb(243, 237, 209);
@@ -204,17 +204,31 @@ h4 {
   align-items: center;
 }
 
-.me {
-  display: flex;
-  text-decoration: none;
-  margin-top: -1.8em;
-  margin-right: -3em;  
-  font-size: 1em;
-  color: #a4dff5
+/* find me icons in top right corner of page */
+
+.find-me {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
-.me:hover {
+.find-me {
+  display: inline-block;
+}
+
+.find-me a {
+  color: rgb(194, 227, 244);
+  margin: 0 .5em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.find-me a:hover {
   color: rgb(243, 237, 209);
 }
+
+
 
 

@@ -3,6 +3,9 @@ const express = require("express")
 
 const server = express()
 
+// middleware
+app.use(express.json())
+
 const PORT = 5000
 
 server.get("/index.html", (req, res) => {

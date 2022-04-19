@@ -4,11 +4,11 @@ const temp = document.querySelector(".temp")
 const displayDate = document.querySelector(".date")
 const displayTime = document.querySelector(".time")
 const conditionDisplay = document.querySelector(".condition")
-const nameOutput = document.querySelector(".name")
+const displayName = document.querySelector(".name")
 const icon = document.querySelector(".icon")
 const displayCloudCover = document.querySelector(".cloud")
-const humidityOutput = document.querySelector(".humidity")
-const windOutput = document.querySelector(".wind")
+const displayHumidity = document.querySelector(".humidity")
+const displayWind = document.querySelector(".wind")
 const sideBar = document.getElementById("locationInput")
 const search = document.querySelector(".search")
 const cities = document.querySelectorAll(".city")
@@ -31,8 +31,7 @@ sideBar.addEventListener("submit", (e) => {
   if (search.value.length == 0) {
     alert("Hmm... cannot seem to find that city")
   } else {
-    /*Change from default city to the 
-    one written in the input field*/
+    // CITY name change when searched
     cityInput = search.value
 
     getWeather()
@@ -66,13 +65,13 @@ function getWeather() {
     // CONVERT DATA FROM JSON --> JS OBJECT
     .then((res) => res.json())
     .then((data) => {
-      // adding the temperature and weather condition to main container
+      // Adding the temperature & weather-condition to main container
       temp.innerHTML = Math.round(data.current.temp_f) + "°F"
       conditionDisplay.innerHTML = data.current.condition.text
 
-      // UPDATE DATE AND TIME
-      const date = data.location.localtime // get the date from the API
-      const year = date.slice(0, 4) // get the year
+      // UPDATE DATE AND TIME FROM API
+      const date = data.location.localtime
+      const year = date.slice(0, 4)
       const month = date.slice(5, 7)
       const day = date.slice(8, 10)
       //get time from the API and convert to 12 hour format
@@ -87,7 +86,7 @@ function getWeather() {
       // TIME
       displayTime.innerHTML = time
 
-      nameOutput.innerHTML = data.location.name
+      displayName.innerHTML = data.location.name
 
       // ACCURATE ICONS
       const iconId = data.current.condition.icon.substr(
@@ -98,8 +97,8 @@ function getWeather() {
 
       // ADD SIDE-BAR DATA
       displayCloudCover.innerHTML = Math.round(data.current.cloud) + "%"
-      humidityOutput.innerHTML = Math.round(data.current.humidity) + "%"
-      windOutput.innerHTML = Math.round(data.current.wind_mph) + " mph"
+      displayHumidity.innerHTML = Math.round(data.current.humidity) + "%"
+      displayWind.innerHTML = Math.round(data.current.wind_mph) + " mph"
 
       app.style.opacity = "1"
     })
